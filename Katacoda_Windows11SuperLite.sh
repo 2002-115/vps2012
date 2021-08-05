@@ -5,6 +5,8 @@ yum install unzip -y
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip
 clear
 echo "Katacoda Centos Windows 11 by fb.com/honglee"
+read -p 1vpl7FHvfTcFQAUQRS10gdu1Y4T_26D3iUar6iYSaZdXwAKtd
+./ngrok authtoken
 nohup ./ngrok tcp --region eu 30889 &>/dev/null &
 yum install sudo -y
 echo "Downloading QEMU"
@@ -21,8 +23,6 @@ nohup sudo /usr/libexec/qemu-kvm -nographic -net nic -net user,hostfwd=tcp::3088
 clear
 echo "Katacoda Centos Windows 11 by fb.com/honglee"
 echo Your RDP IP Address:
-curl --silent --show-error http://18.142.75.48:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo User: Administrator
-echo Password: hongle999
-echo Script by fb.com/honglee
-echo Wait 2-4m VM boot up before connect.
+echo Password: honglee999
